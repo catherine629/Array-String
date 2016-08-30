@@ -1,3 +1,3 @@
-# Array: LeetCode & CC150
+# Array & String: LeetCode & CC150
 
 The Array Problems & Solutions from LeetCode & CC150
