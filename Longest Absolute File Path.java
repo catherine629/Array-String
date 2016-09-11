@@ -1,3 +1,14 @@
+/**
+ * 1. class Node {int level, int currLen, boolean isFile}
+ * 2. split input by "\n" => {files/dirs}
+ * 3. create Stack<Node> and maxPath = 0
+ * 4. loop element in array:
+ *      - create Node via element
+ *      - while (stack non-empty && current.level <= stack.peek().level) => stack.pop() => to make the top of stack be the upper level of current node
+ *      - update currentNode.currLen => empty stack -> s.length, non-empty stack -> s.length + lastNode.currLen - curr.level + 1
+ *      - if isFile -> update maxPath
+ *      - if not isFile -> stack.push(n)
+ **/
 public class Solution {
     public int lengthLongestPath(String input) {
         if (input == null || input.length() == 0)
